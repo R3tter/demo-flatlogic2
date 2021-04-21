@@ -102,6 +102,6 @@
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
-    "use-form-validation-hook": "^1.0.19"
+    "use-form-validation-hook": "^1.0.20"
   }
 }
