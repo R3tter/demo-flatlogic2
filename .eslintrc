@@ -19,7 +19,7 @@
     "global-require": "off",
     "react/jsx-wrap-multilines": "off",
     "react/no-unused-prop-types": "warn",
-    "import/no-duplicates": "warn",
+    "no-duplicate-imports": "warn",
     "operator-linebreak": "off",
     "react/require-default-props": "off",
     "react/jsx-filename-extension": "warn",
@@ -49,5 +49,5 @@
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off"
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended", "eslint-config-airbnb"]
+  "extends": ["eslint:recommended", "plugin:react/recommended"]
 }

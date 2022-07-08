@@ -18,6 +18,7 @@ module.exports = env => ({
     filename: 'bundle.[fullhash:6].js'
   },
   devtool: 'cheap-module-source-map',
+  stats: 'errors-only',
   mode: 'development',
   module: {
     rules: [
@@ -90,16 +91,15 @@ module.exports = env => ({
     })
   ],
   devServer: {
-    contentBase: build,
     port: 8080,
     compress: false,
     hot: true,
-    stats: 'normal',
     open: false,
-    clientLogLevel: 'none',
+    client: {
+      logging: 'info'
+    },
     historyApiFallback: {
       disableDotRule: true
     },
-    disableHostCheck: true
   }
 });
