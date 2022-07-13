@@ -96,10 +96,11 @@ module.exports = env => ({
     hot: true,
     open: false,
     client: {
-      logging: 'info'
+      logging: 'info',
+      overlay: false
     },
     historyApiFallback: {
       disableDotRule: true
-    },
+    }
   }
 });
