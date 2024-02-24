@@ -1,6 +1,4 @@
-import thunk from 'redux-thunk';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
+import { configureStore, combineReducers } from '@reduxjs/toolkit'
 
 import { Cached } from 'App/reducers/cached';
 import { LOCAL_STORAGE_NAME } from 'constants/index.js';
@@ -33,11 +31,11 @@ const rootReducer = (state, action) => {
   }
   return appReducer(state, action);
 };
-const store = createStore(
-  rootReducer,
-  // get Cached from localStorage
-  loadState(LOCAL_STORAGE_NAME),
-  composeWithDevTools(applyMiddleware(thunk, cachedMiddleware))
-);
+const store = configureStore({
+  reducer: rootReducer,
+  preloadedState: loadState(LOCAL_STORAGE_NAME),
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(cachedMiddleware)
+});
 // eslint-disable-next-line
 export default store;

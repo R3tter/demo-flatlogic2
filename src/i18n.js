@@ -12,7 +12,7 @@ i18n.use(initReactI18next).init({
     en,
     ru
   },
-  lng: loadState(LOCAL_STORAGE_NAME)?.Cached.lang.id ?? 'en'
+  lng: loadState(LOCAL_STORAGE_NAME)?.Cached.language ?? 'en'
 });
 
 export default i18n;

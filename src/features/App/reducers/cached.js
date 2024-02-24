@@ -1,4 +1,4 @@
-import { handleActions } from 'redux-actions';
+import { createReducer } from '@reduxjs/toolkit';
 import { setCachedData } from 'App/actions';
 
 const initialState = {
@@ -8,12 +8,12 @@ const initialState = {
   language: 'en'
 };
 
-export const Cached = handleActions(
-  {
-    [setCachedData]: (state, { payload }) => ({
-      ...state,
-      ...payload
+export const Cached = createReducer(
+  initialState, (builder) => {
+    builder.addCase(setCachedData, (state, { payload }) => {
+      console.log(state);
+      state = { ...state, ...payload };
+      return state;
     })
-  },
-  initialState
+  }
 );
