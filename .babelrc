@@ -25,6 +25,7 @@
         "images": "./src/images/",
         "store": "./src/store/",
         "App": "./src/features/App/",
+        "Analytics": "./src/features/Dashboard/Analytics/",
         "Common": "./src/features/Common/",
         "FormComponents": "./src/features/FormComponents/",
         "constants": "./src/constants/",

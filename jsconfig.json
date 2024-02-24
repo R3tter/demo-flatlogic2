@@ -10,6 +10,8 @@
       "store/*": ["store/*"],
       "App": ["features/App"],
       "App/*": ["features/App/*"],
+      "Analytics": ["features/Dashboard/Analytics"],
+      "Analytics/*": ["features/Dashboard/Analytics/*"],
       "Common": ["features/Common"],
       "Common/*": ["features/Common/*"],
       "FormComponents": ["features/FormComponents"],

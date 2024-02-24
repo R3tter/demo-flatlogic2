@@ -79,8 +79,10 @@
     "webpack-dev-server": "^5.0.2"
   },
   "dependencies": {
+    "@emotion/styled": "^11.11.0",
     "@jmind.systems/react-modal": "0.0.27",
     "@jmind.systems/react-status-controller": "0.0.14",
+    "@mui/icons-material": "^5.15.10",
     "@reduxjs/toolkit": "^2.2.1",
     "aphrodite": "^2.4.0",
     "api-req-redux": "2.0.10",

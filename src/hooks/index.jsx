@@ -1,9 +1,10 @@
 import { useSelector } from 'react-redux';
 import { Redirect, Route } from 'react-router-dom';
 
+import { pageCategories } from 'constants/index';
+
 export const useRoutes = routes => {
-  const isAuth = useSelector(getIsAuth);
-  const { permissions } = useSelector(getUserInfo);
+  const isAuth = true;
   return routes.map((route, i) => {
     const { pageCategory, path } = route;
     switch (pageCategory) {
@@ -17,7 +18,7 @@ export const useRoutes = routes => {
         return !isAuth ? (
           <Route key={i} {...route} component={route.component} />
         ) : (
-          <Redirect key={i} from={path} to="/cabinet" />
+          <Redirect key={i} from={path} to="/main/" />
         );
     }
   });

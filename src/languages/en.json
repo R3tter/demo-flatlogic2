@@ -1,6 +1,13 @@
 {
   "common": {
     "test": "Test text",
-    "click": "Click me"
+    "click": "Click me",
+    "inputPlaceholder": "Write text"
+  },
+  "analytics": {
+    "searchPlaceholder": "Search Dashboard"
+  },
+  "sideBar": {
+    "title": "Sing App"
   }
 }
