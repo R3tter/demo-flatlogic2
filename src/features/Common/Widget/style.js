@@ -37,6 +37,7 @@ export const root = closed =>
     _: {
       display: closed ? 'none' : 'flex',
       flexDirection: 'column',
+      gap: '28px',
       padding: mainPadding,
       minWidth: '260px',
       boxShadow: widgetShadow,

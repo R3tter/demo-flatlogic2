@@ -37,7 +37,7 @@ export const Widget = memo(({ title, collapsible, closable, children }) => {
   return (
     <div className={css(styles.root(!visible)._)}>
       {header}
-      <div ref={containerRef} className={css(styles.container(collapsed, height)._)}>
+      <div ref={containerRef} className={css(styles.container(collapsed, collapsible ? height : 'auto')._)}>
         {children}
       </div>
     </div>

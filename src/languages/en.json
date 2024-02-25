@@ -7,7 +7,12 @@
     "logOut": "Log out"
   },
   "analytics": {
-    "searchPlaceholder": "Search Dashboard"
+    "searchPlaceholder": "Search Dashboard",
+    "title": "Analytics",
+    "visits": "Visits Today",
+    "revenue": "Revenue Breakdown",
+    "performance": "App Perfomance",
+    "overview": "Server Overview"
   },
   "sideBar": {
     "title": "Sing App"
