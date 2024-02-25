@@ -22,7 +22,7 @@ export const regular = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     gap: '40px',
-    width: '100%'
+    width: 'calc(100% - 30px)'
   },
   widgetsGridTop: {
     width: '100%',
@@ -34,7 +34,7 @@ export const regular = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     width: '100%',
-    gap: '28px'
+    gap: '16px'
   },
   textInfoMain: {
     display: 'flex',
@@ -73,5 +73,49 @@ export const regular = StyleSheet.create({
     width: '24px',
     height: '24px',
     color: colors.green
+  },
+  performanceLegend: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '15px',
+    width: '100%'
+  },
+  performanceLegendText: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '5px',
+    fontSize: '12px',
+    color: colors.black.light
+  },
+  preformanceItem: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '5px'
+  },
+  grayLabel: {
+    fontSize: '12px',
+    color: colors.black.light,
+    minWidth: 'max-content'
+  },
+  serverItem: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '100%'
+  },
+  serverContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    width: '100%'
   }
 });
+
+export const circle = color =>
+  StyleSheet.create({
+    _: {
+      width: '5px',
+      height: '5px',
+      borderRadius: '50%',
+      background: color
+    }
+  });

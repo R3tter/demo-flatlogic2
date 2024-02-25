@@ -12,7 +12,12 @@
     "visits": "Visits Today",
     "revenue": "Revenue Breakdown",
     "performance": "App Perfomance",
-    "overview": "Server Overview"
+    "overview": "Server Overview",
+    "daily": "Daily Line Chart",
+    "performanceWidget": {
+      "current": "This Period",
+      "last": "Last Period"
+    }
   },
   "sideBar": {
     "title": "Sing App"

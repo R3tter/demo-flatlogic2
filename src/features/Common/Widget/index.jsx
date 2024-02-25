@@ -7,7 +7,7 @@ import Cancel from 'images/icons/cancel.svg';
 
 import * as styles from './style';
 
-export const Widget = memo(({ title, collapsible, closable, children }) => {
+export const Widget = memo(({ title, collapsible, closable, children, customStyles }) => {
   const [visible, setVisible] = useState(true);
   const [collapsed, setCollapsed] = useState(false);
   const [height, setHeight] = useState('auto');
@@ -35,7 +35,7 @@ export const Widget = memo(({ title, collapsible, closable, children }) => {
   );
 
   return (
-    <div className={css(styles.root(!visible)._)}>
+    <div className={css(styles.root(!visible, customStyles)._)}>
       {header}
       <div ref={containerRef} className={css(styles.container(collapsed, collapsible ? height : 'auto')._)}>
         {children}
@@ -48,7 +48,8 @@ Widget.propTypes = {
   title: PropTypes.string,
   collapsible: PropTypes.bool,
   closable: PropTypes.bool,
-  children: PropTypes.node
+  children: PropTypes.node,
+  customStyles: PropTypes.object
 };
 
 Widget.defaultProps = {

@@ -32,7 +32,7 @@ export const regular = StyleSheet.create({
   }
 });
 
-export const root = closed =>
+export const root = (closed, customStyles = {}) =>
   StyleSheet.create({
     _: {
       display: closed ? 'none' : 'flex',
@@ -40,9 +40,11 @@ export const root = closed =>
       gap: '28px',
       padding: mainPadding,
       minWidth: '260px',
+      width: '100%',
       boxShadow: widgetShadow,
       borderRadius: '5px',
-      background: colors.white
+      background: colors.white,
+      ...customStyles
     }
   });
 
