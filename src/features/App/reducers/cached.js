@@ -8,12 +8,9 @@ const initialState = {
   language: 'en'
 };
 
-export const Cached = createReducer(
-  initialState, (builder) => {
-    builder.addCase(setCachedData, (state, { payload }) => {
-      console.log(state);
-      state = { ...state, ...payload };
-      return state;
-    })
-  }
-);
+export const Cached = createReducer(initialState, builder => {
+  builder.addCase(setCachedData, (state, { payload }) => {
+    state = { ...state, ...payload };
+    return state;
+  });
+});

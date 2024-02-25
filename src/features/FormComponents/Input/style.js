@@ -12,8 +12,8 @@ export const regular = StyleSheet.create({
     background: 'transparent'
   },
   icon: {
-    width: '10px',
-    height: '10px',
+    width: '16px',
+    height: '16px',
     fill: colors.black.light,
     color: colors.black.light
   }

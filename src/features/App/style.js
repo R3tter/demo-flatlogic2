@@ -7,5 +7,8 @@ export const regular = StyleSheet.create({
     height: '100vh',
     display: 'flex',
     background: colors.gray
+  },
+  content: {
+    width: '100%'
   }
 });

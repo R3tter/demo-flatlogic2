@@ -29,6 +29,8 @@ export const NavItem = memo(({ subItems, href, icon: Icon, title, subTitle, expa
     [subItems]
   );
 
+  console.log(subItemsJSX.length);
+
   return (
     <div className={css(styles.regular.root)}>
       <div className={css(styles.regular.mainContainer)} onClick={handleExpand}>
