@@ -5,22 +5,26 @@ export const regular = StyleSheet.create({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '10px',
+    gap: '6px',
     padding: '10px 0',
     minWidth: '150px'
   },
   item: {
     width: '100%',
     display: 'flex',
-    justifyContent: 'center',
     alignItems: 'center',
     gap: '10px',
-    padding: '10px 20px',
+    padding: '5px 20px',
     fontSize: '14px',
     cursor: 'pointer',
     ':hover': {
       background: colors.gray
     }
+  },
+  divider: {
+    width: '100%',
+    height: '1px',
+    background: colors.border
   },
   itemIcon: {
     width: '16px',

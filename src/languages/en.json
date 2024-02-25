@@ -2,7 +2,9 @@
   "common": {
     "test": "Test text",
     "click": "Click me",
-    "inputPlaceholder": "Write text"
+    "inputPlaceholder": "Write text",
+    "account": "My Account",
+    "logOut": "Log out"
   },
   "analytics": {
     "searchPlaceholder": "Search Dashboard"
