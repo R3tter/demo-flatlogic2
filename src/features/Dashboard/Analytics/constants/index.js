@@ -1,6 +1,8 @@
 import { colors } from 'constants/styles';
 import { supportStatuses } from 'constants/index';
 
+const type = { call: 'Call', meeting: 'Meeting', interview: 'Interview' };
+
 export const data = {
   visits: {
     total: '4.332',
@@ -361,6 +363,18 @@ export const data = {
       city: 'Hanoverton',
       status: { status: supportStatuses.sent, label: 'Sent' }
     }
+  ],
+  todo: [
+    { id: 0, completed: false, type: type.call, name: 'Call with HT Company', time: '9:00' },
+    {
+      id: 1,
+      completed: false,
+      type: type.meeting,
+      name: 'Meeting with Andrew',
+      time: '11:00'
+    },
+    { id: 2, completed: false, type: type.interview, name: 'Interview with HR', time: '14:00' },
+    { id: 3, completed: false, type: type.call, name: 'Call', time: '11:00' }
   ]
 };
 

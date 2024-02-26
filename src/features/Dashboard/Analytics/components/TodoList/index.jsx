@@ -1,23 +1,12 @@
 import { css } from 'aphrodite/no-important';
+import PropTypes from 'prop-types';
 import * as styles from './style';
 import { useState } from 'react';
 import { Checkbox } from 'FormComponents';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
-const type = { call: 'Call', meeting: 'Meeting', interview: 'Interview' };
-
-export const TodoList = () => {
-  const [list, setList] = useState([
-    { id: 0, completed: false, type: type.call, name: 'Call with HT Company', time: '9:00' },
-    {
-      id: 1,
-      completed: true,
-      type: type.meeting,
-      name: 'Meeting with Andrew',
-      time: '11:00'
-    },
-    { id: 2, completed: false, type: type.interview, name: 'Interview with HR', time: '14:00' }
-  ]);
+export const TodoList = ({ data }) => {
+  const [list, setList] = useState(data);
   const listLength = list.length;
   const completedListLength = list.filter(({ completed }) => completed).length;
 
@@ -43,7 +32,7 @@ export const TodoList = () => {
                 value={completed}
               />
             </div>
-            <div>
+            <div className={css(styles.todoItem(completed)._)}>
               <div className={css(styles.regular.listItemType)}>{type}</div>
               <div className={css(styles.regular.listItemName)}>{name}</div>
               <div className={css(styles.regular.listItemTime)}>{time}</div>
@@ -56,4 +45,8 @@ export const TodoList = () => {
       </div>
     </div>
   );
+};
+
+TodoList.propTypes = {
+  data: PropTypes.array
 };

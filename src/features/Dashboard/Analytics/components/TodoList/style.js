@@ -1,9 +1,13 @@
 import { StyleSheet } from 'aphrodite/no-important';
+import { colors, widgetShadow } from 'constants/styles';
 
 export const regular = StyleSheet.create({
   root: {
     display: 'block',
-    paddingBottom: '30px'
+    paddingBottom: '30px',
+    background: colors.white,
+    boxShadow: widgetShadow,
+    padding: '15px 20px'
   },
   title: {
     paddingBottom: '30px'
@@ -26,13 +30,26 @@ export const regular = StyleSheet.create({
     boxSizing: 'border-box',
     borderRadius: '50%',
     color: 'white',
-    backgroundColor: 'blue'
+    backgroundColor: colors.blue.light
   },
-  subTitle: { color: 'grey' },
+  subTitle: { color: colors.black.light },
   listItem: { display: 'flex', padding: '10px 0' },
-  listItemType: { display: 'flex', color: 'grey', fontSize: '12px' },
+  listItemType: { display: 'flex', color: colors.black.light, fontSize: '12px' },
   listItemName: { display: 'flex' },
-  listItemTime: { display: 'flex', color: 'grey', fontSize: '12px' },
+  listItemTime: { display: 'flex', color: colors.black.light, fontSize: '12px' },
   checkboxWrapper: { display: 'flex', alignItems: 'center' },
-  seeAll: { display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'blue', cursor: 'pointer' }
+  seeAll: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: colors.blue.light,
+    cursor: 'pointer'
+  }
 });
+
+export const todoItem = completed =>
+  StyleSheet.create({
+    _: {
+      textDecoration: completed ? 'line-through' : 'none'
+    }
+  });

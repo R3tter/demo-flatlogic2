@@ -36,11 +36,9 @@ export const regular = StyleSheet.create({
     gap: '40px',
     width: '300px',
     minWidth: '300px',
-    background: 'red',
     [`@media (max-width: 1940px)`]: {
       flexDirection: 'row',
-      width: '100%',
-      height: '40px'
+      width: '100%'
     }
   },
   widgetsGridTop: {
