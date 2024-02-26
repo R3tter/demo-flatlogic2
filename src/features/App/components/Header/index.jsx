@@ -8,7 +8,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 import { Input } from 'FormComponents';
 
-import { Menu } from './components';
+import { Menu, User } from './components';
 import * as styles from './style';
 
 export const Header = memo(({ toggleSidebar }) => {
@@ -28,7 +28,10 @@ export const Header = memo(({ toggleSidebar }) => {
         </div>
         <Input icon={SearchIcon} placeholder="Search Dashboard" onChange={handleSearchChange} value={value} />
       </div>
-      <Menu />
+      <div className={css(styles.regular.right)}>
+        <User />
+        <Menu />
+      </div>
     </div>
   );
 });

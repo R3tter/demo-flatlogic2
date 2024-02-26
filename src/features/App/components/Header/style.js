@@ -18,6 +18,11 @@ export const regular = StyleSheet.create({
     alignItems: 'center',
     gap: '30px'
   },
+  right: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '16px'
+  },
   controls: {
     display: 'flex',
     alignItems: 'center',
