@@ -9,7 +9,7 @@ import { colors } from 'constants/styles';
 import { Widget } from 'Common';
 
 import { data } from './constants';
-import { Progress } from './components';
+import { Progress, Statistic } from './components';
 
 import * as styles from './style';
 
@@ -36,6 +36,12 @@ export const Analytics = memo(() => {
           <Progress progress={current} color={colors.orange} />
         </div>
       )),
+    []
+  );
+
+  const statisticsJSX = useMemo(
+    () =>
+      data.statistics.map(({ title, color, data }, i) => <Statistic title={title} color={color} data={data} key={i} />),
     []
   );
 
@@ -96,6 +102,7 @@ export const Analytics = memo(() => {
               containerProps={{ style: { width: '100%' } }}
             />
           </Widget>
+          <div className={css(styles.regular.statistics)}>{statisticsJSX}</div>
         </div>
       </div>
     </div>

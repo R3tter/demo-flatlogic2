@@ -17,6 +17,10 @@
     "performanceWidget": {
       "current": "This Period",
       "last": "Last Period"
+    },
+    "statistic": {
+      "reg": "Registrations",
+      "bounce": "Bounce Rate"
     }
   },
   "sideBar": {

@@ -266,5 +266,52 @@ export const data = {
         color: colors.blue.dark
       }
     ]
-  }
+  },
+  statistics: [
+    {
+      title: 'Statistic Light Blue',
+      color: colors.blue.dark,
+      data: {
+        total: '4,232',
+        registration: {
+          value: '+830',
+          positive: true
+        },
+        bounce: {
+          value: '4.5%',
+          positive: false
+        }
+      }
+    },
+    {
+      title: 'Statistic Sing App',
+      color: colors.orange,
+      data: {
+        total: '754',
+        registration: {
+          value: '+30',
+          positive: true
+        },
+        bounce: {
+          value: '2.5%',
+          positive: true
+        }
+      }
+    },
+    {
+      title: 'Statistic RNS',
+      color: colors.blue.light,
+      data: {
+        total: '1,025',
+        registration: {
+          value: '+230',
+          positive: true
+        },
+        bounce: {
+          value: '21%',
+          positive: false
+        }
+      }
+    }
+  ]
 };

@@ -107,6 +107,11 @@ export const regular = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     width: '100%'
+  },
+  statistics: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, minmax(400px, 1fr))',
+    gap: '40px'
   }
 });
 
