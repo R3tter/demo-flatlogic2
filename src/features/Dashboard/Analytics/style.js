@@ -38,6 +38,7 @@ export const regular = StyleSheet.create({
     minWidth: '300px',
     [`@media (max-width: 1940px)`]: {
       flexDirection: 'row',
+      justifyContent: 'flex-start',
       width: '100%'
     }
   },

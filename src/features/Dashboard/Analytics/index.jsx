@@ -9,7 +9,7 @@ import { colors } from 'constants/styles';
 import { Widget, Table, StatusBadge } from 'Common';
 
 import { data, tableColumns } from './constants';
-import { Progress, Statistic, TodoList, Notifications } from './components';
+import { Progress, Statistic, TodoList, Notifications, Calendar } from './components';
 
 import * as styles from './style';
 
@@ -120,6 +120,9 @@ export const Analytics = memo(() => {
           </Widget>
         </div>
         <div className={css(styles.regular.right)}>
+          <Widget closable={false} customStyles={{ width: '300px', height: 'fit-content' }}>
+            <Calendar />
+          </Widget>
           <TodoList data={data.todo} />
           <Notifications data={data.notification} />
         </div>

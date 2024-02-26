@@ -6,14 +6,12 @@ import { format } from 'date-fns';
 export const Calendar = () => {
   const [value, onChange] = useState(new Date());
   return (
-    <div>
-      <ReactCalendar
-        formatShortWeekday={(locale, date) => format(date, 'EEEEE')}
-        next2Label={null}
-        prev2Label={null}
-        onChange={onChange}
-        value={value}
-      />
-    </div>
+    <ReactCalendar
+      formatShortWeekday={(locale, date) => format(date, 'EEEEE')}
+      next2Label={null}
+      prev2Label={null}
+      onChange={onChange}
+      value={value}
+    />
   );
 };

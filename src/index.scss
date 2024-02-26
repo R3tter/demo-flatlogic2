@@ -43,16 +43,39 @@ h5 {
   line-height: 1.43;
 }
 
+.react-calendar {
+  border: none;
+}
+
 .react-calendar__navigation {
   display: flex;
-  background: red;
+  margin-bottom: 0;
 
   .react-calendar__navigation__label {
-    font-weight: bold;
+    font-weight: 300;
     pointer-events: none;
+    color: rgb(121, 136, 146);
   }
 
   .react-calendar__navigation__arrow {
     flex-grow: 0.333;
   }
+}
+.react-calendar__month-view__weekdays__weekday {
+  color: rgb(121, 136, 146);
+  font-weight: 300;
+
+  & > abbr {
+    text-decoration: none;
+  }
+}
+
+.react-calendar__month-view__days__day {
+  color: rgb(121, 136, 146);
+  font-weight: 300;
+}
+
+.react-calendar__tile--active {
+  border-radius: 50%;
+  color: white;
 }

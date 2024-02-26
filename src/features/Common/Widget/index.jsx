@@ -27,7 +27,7 @@ export const Widget = memo(({ title, collapsible, closable, children, customStyl
         <span className={css(styles.regular.title)}>{title}</span>
         <div className={css(styles.regular.controls)}>
           {collapsible && <ExpandMoreIcon className={css(styles.collapseIcon(collapsed)._)} onClick={handleCollapse} />}
-          <Cancel className={css(styles.regular.icon)} onClick={handleClose} />
+          {closable && <Cancel className={css(styles.regular.icon)} onClick={handleClose} />}
         </div>
       </div>
     ),
@@ -36,7 +36,7 @@ export const Widget = memo(({ title, collapsible, closable, children, customStyl
 
   return (
     <div className={css(styles.root(!visible, customStyles)._)}>
-      {header}
+      {title && header}
       <div ref={containerRef} className={css(styles.container(collapsed, collapsible ? height : 'auto')._)}>
         {children}
       </div>

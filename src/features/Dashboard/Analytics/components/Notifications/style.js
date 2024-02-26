@@ -7,6 +7,7 @@ export const regular = StyleSheet.create({
     flexDirection: 'column',
     gap: '20px',
     width: '100%',
+    height: 'fit-content',
     maxWidth: '300px',
     padding: '15px 20px',
     background: colors.white,
