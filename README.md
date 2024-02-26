@@ -1,5 +1,12 @@
 # demo-flatlogic2
 
+### Deployed project
+
+```
+https://demo-flatlogic2.vercel.app/main/analytics
+```
+
+
 ### To run project on local machine run
 
 #### 1. Make sure you are using following node version
