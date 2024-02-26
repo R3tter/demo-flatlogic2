@@ -1,4 +1,4 @@
-import { memo, useMemo } from 'react';
+import { memo, useMemo, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { css } from 'aphrodite/no-important';
 import ArrowOutwardOutlinedIcon from '@mui/icons-material/ArrowOutwardOutlined';
@@ -15,6 +15,7 @@ import * as styles from './style';
 
 export const Analytics = memo(() => {
   const { t } = useTranslation(['analytics']);
+  const lineChartRef = useRef(null);
 
   const visitsItems = useMemo(
     () =>
@@ -63,6 +64,11 @@ export const Analytics = memo(() => {
     []
   );
 
+  useEffect(() => {
+    // fixing lineChart initialSize
+    lineChartRef && setTimeout(() => lineChartRef.current?.chart?.reflow(), 1000);
+  }, []);
+
   return (
     <div className={css(styles.regular.root)}>
       <h3 className={css(styles.regular.title)}>{t('title')}</h3>
@@ -105,6 +111,7 @@ export const Analytics = memo(() => {
               highcharts={Highcharts}
               options={data.dailyData}
               containerProps={{ style: { width: '100%' } }}
+              ref={lineChartRef}
             />
           </Widget>
           <div className={css(styles.regular.statistics)}>{statisticsJSX}</div>
