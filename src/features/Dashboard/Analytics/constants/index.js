@@ -1,4 +1,5 @@
 import { colors } from 'constants/styles';
+import { supportStatuses } from 'constants/index';
 
 export const data = {
   visits: {
@@ -313,5 +314,90 @@ export const data = {
         }
       }
     }
+  ],
+  requests: [
+    {
+      name: 'Mark Otto',
+      email: 'ottoto@wxample.com',
+      product: 'ON the Road',
+      price: '$25 224.2',
+      date: '11 May 2017',
+      city: 'Otsego',
+      status: { status: supportStatuses.sent, label: 'Sent' }
+    },
+    {
+      name: 'Jacob Thornton',
+      email: 'thornton@wxample.com',
+      product: 'HP Core i7',
+      price: '$1 254.2',
+      date: '4 Jun 2017',
+      city: 'Fivepointville',
+      status: { status: supportStatuses.sent, label: 'Sent' }
+    },
+    {
+      name: 'Larry the Bird',
+      email: 'bird@wxample.com',
+      product: 'Air Pro',
+      price: '$1 570.0',
+      date: '27 Aug 2017',
+      city: 'Leadville North',
+      status: { status: supportStatuses.pending, label: 'Pending' }
+    },
+    {
+      name: 'Joseph May',
+      email: 'josephmay@wxample.com',
+      product: 'Version Control',
+      price: '$5 224.5',
+      date: '19 Feb 2018',
+      city: 'Seaforth',
+      status: { status: supportStatuses.declined, label: 'Declined' }
+    },
+    {
+      name: 'Peter Horadnia',
+      email: 'horadnia@wxample.com',
+      product: 'Lets Dance',
+      price: '$43 594.7',
+      date: '1 Mar 2018',
+      city: 'Hanoverton',
+      status: { status: supportStatuses.sent, label: 'Sent' }
+    }
   ]
 };
+
+export const tableColumns = [
+  {
+    id: 'name',
+    label: 'NAME',
+    style: { grid: '1fr' }
+  },
+  {
+    id: 'email',
+    label: 'EMAIL',
+    style: { grid: '1fr' }
+  },
+  {
+    id: 'product',
+    label: 'PRODUCT',
+    style: { grid: '1fr' }
+  },
+  {
+    id: 'price',
+    label: 'PRICE',
+    style: { grid: 'minmax(200px, 1fr)' }
+  },
+  {
+    id: 'date',
+    label: 'DATE',
+    style: { grid: '1fr' }
+  },
+  {
+    id: 'city',
+    label: 'CITY',
+    style: { grid: '1fr' }
+  },
+  {
+    id: 'status',
+    label: 'STATUS',
+    style: { grid: '1fr' }
+  }
+];

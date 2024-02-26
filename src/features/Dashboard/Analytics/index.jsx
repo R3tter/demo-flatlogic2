@@ -6,9 +6,9 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
 import { colors } from 'constants/styles';
-import { Widget } from 'Common';
+import { Widget, Table, StatusBadge } from 'Common';
 
-import { data } from './constants';
+import { data, tableColumns } from './constants';
 import { Progress, Statistic } from './components';
 
 import * as styles from './style';
@@ -58,6 +58,11 @@ export const Analytics = memo(() => {
     []
   );
 
+  const tableRows = useMemo(
+    () => data.requests.map(item => ({ ...item, status: <StatusBadge {...item.status} /> })),
+    []
+  );
+
   return (
     <div className={css(styles.regular.root)}>
       <h3 className={css(styles.regular.title)}>{t('title')}</h3>
@@ -103,6 +108,9 @@ export const Analytics = memo(() => {
             />
           </Widget>
           <div className={css(styles.regular.statistics)}>{statisticsJSX}</div>
+          <Widget title={t('requests')}>
+            <Table rows={tableRows} columns={tableColumns} />
+          </Widget>
         </div>
       </div>
     </div>

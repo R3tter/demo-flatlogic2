@@ -5,6 +5,8 @@ export const regular = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     width: '100%',
+    height: 'calc(100% - 80px)',
+    overflow: 'auto',
     padding: '40px'
   }
 });
