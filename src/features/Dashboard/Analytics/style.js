@@ -28,7 +28,13 @@ export const regular = StyleSheet.create({
     width: '100%',
     display: 'grid',
     gridTemplateColumns: 'repeat(4, minmax(260px, 1fr))',
-    gap: '40px'
+    gap: '40px',
+    [`@media (max-width: 1340px)`]: {
+      gridTemplateColumns: 'repeat(2, minmax(260px, 1fr))'
+    },
+    [`@media (max-width: 1140px)`]: {
+      gridTemplateColumns: 'repeat(1, minmax(260px, 1fr))'
+    }
   },
   widgetBody: {
     display: 'flex',
@@ -110,8 +116,11 @@ export const regular = StyleSheet.create({
   },
   statistics: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(3, minmax(400px, 1fr))',
-    gap: '40px'
+    gridTemplateColumns: 'repeat(3, minmax(260px, 1fr))',
+    gap: '40px',
+    [`@media (max-width: 1140px)`]: {
+      gridTemplateColumns: 'repeat(1, minmax(260px, 1fr))'
+    }
   }
 });
 
