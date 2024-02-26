@@ -112,6 +112,7 @@ export const Analytics = memo(() => {
             <Table rows={tableRows} columns={tableColumns} />
           </Widget>
         </div>
+        <div className={css(styles.regular.right)}></div>
       </div>
     </div>
   );

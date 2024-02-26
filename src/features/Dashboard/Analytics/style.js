@@ -16,13 +16,32 @@ export const regular = StyleSheet.create({
   container: {
     display: 'flex',
     gap: '40px',
-    width: '100%'
+    width: '100%',
+    [`@media (max-width: 1940px)`]: {
+      flexDirection: 'column'
+    }
   },
   left: {
     display: 'flex',
     flexDirection: 'column',
     gap: '40px',
-    width: 'calc(100% - 30px)'
+    width: 'calc(100% - 380px)',
+    [`@media (max-width: 1940px)`]: {
+      width: 'calc(100% - 30px)'
+    }
+  },
+  right: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '40px',
+    width: '300px',
+    minWidth: '300px',
+    background: 'red',
+    [`@media (max-width: 1940px)`]: {
+      flexDirection: 'row',
+      width: '100%',
+      height: '40px'
+    }
   },
   widgetsGridTop: {
     width: '100%',
