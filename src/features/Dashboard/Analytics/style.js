@@ -6,7 +6,8 @@ export const regular = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     gap: '25px',
-    width: '100%'
+    width: '100%',
+    marginTop: '30px'
   },
   title: {
     fontSize: '35px',
