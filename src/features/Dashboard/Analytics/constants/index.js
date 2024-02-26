@@ -1,3 +1,10 @@
+import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
+import FileOpenOutlinedIcon from '@mui/icons-material/FileOpenOutlined';
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
+import SettingsIcon from '@mui/icons-material/Settings';
+import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
+
 import { colors } from 'constants/styles';
 import { supportStatuses } from 'constants/index';
 
@@ -375,6 +382,50 @@ export const data = {
     },
     { id: 2, completed: false, type: type.interview, name: 'Interview with HR', time: '14:00' },
     { id: 3, completed: false, type: type.call, name: 'Call', time: '11:00' }
+  ],
+  notification: [
+    {
+      icon: {
+        image: ThumbUpOutlinedIcon,
+        color: colors.blue.light
+      },
+      text: 'Ken accepts your invitation'
+    },
+    {
+      icon: {
+        image: FileOpenOutlinedIcon,
+        color: colors.green
+      },
+      text: 'Report from LT Company'
+    },
+    {
+      icon: {
+        image: EmailOutlinedIcon,
+        color: colors.orange
+      },
+      text: '4 Private Mails'
+    },
+    {
+      icon: {
+        image: MessageOutlinedIcon,
+        color: colors.green
+      },
+      text: '3 Comments to your Post'
+    },
+    {
+      icon: {
+        image: SettingsIcon,
+        color: colors.black.light
+      },
+      text: 'New Version of RNS app'
+    },
+    {
+      icon: {
+        image: NotificationsOutlinedIcon,
+        color: colors.blue.light
+      },
+      text: '15 Notifications from Social Apps'
+    }
   ]
 };
 

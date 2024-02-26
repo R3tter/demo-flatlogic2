@@ -22,7 +22,8 @@
     "statistic": {
       "reg": "Registrations",
       "bounce": "Bounce Rate"
-    }
+    },
+    "notificationTitle": "Notifications"
   },
   "sideBar": {
     "title": "Sing App"

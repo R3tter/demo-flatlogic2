@@ -7,7 +7,8 @@ export const regular = StyleSheet.create({
     paddingBottom: '30px',
     background: colors.white,
     boxShadow: widgetShadow,
-    padding: '15px 20px'
+    padding: '15px 20px',
+    borderRadius: '5px'
   },
   title: {
     paddingBottom: '30px'
@@ -32,12 +33,33 @@ export const regular = StyleSheet.create({
     color: 'white',
     backgroundColor: colors.blue.light
   },
-  subTitle: { color: colors.black.light },
-  listItem: { display: 'flex', padding: '10px 0' },
-  listItemType: { display: 'flex', color: colors.black.light, fontSize: '12px' },
-  listItemName: { display: 'flex' },
-  listItemTime: { display: 'flex', color: colors.black.light, fontSize: '12px' },
-  checkboxWrapper: { display: 'flex', alignItems: 'center' },
+  subTitle: {
+    color: colors.black.light
+  },
+  listItem: {
+    display: 'flex',
+    gap: '10px',
+    padding: '10px 0'
+  },
+  listItemType: {
+    display: 'flex',
+    color: colors.black.light,
+    fontSize: '12px'
+  },
+  listItemName: {
+    display: 'flex',
+    fontSize: '14px',
+    color: colors.black.dark
+  },
+  listItemTime: {
+    display: 'flex',
+    color: colors.black.light,
+    fontSize: '12px'
+  },
+  checkboxWrapper: {
+    display: 'flex',
+    alignItems: 'center'
+  },
   seeAll: {
     display: 'flex',
     justifyContent: 'center',
