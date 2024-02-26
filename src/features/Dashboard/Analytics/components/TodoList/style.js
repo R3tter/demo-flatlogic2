@@ -5,6 +5,8 @@ export const regular = StyleSheet.create({
   root: {
     display: 'block',
     paddingBottom: '30px',
+    width: '100%',
+    maxWidth: '300px',
     background: colors.white,
     boxShadow: widgetShadow,
     padding: '15px 20px',

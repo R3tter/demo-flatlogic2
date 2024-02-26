@@ -25,9 +25,9 @@ export const regular = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     gap: '40px',
-    width: 'calc(100% - 380px)',
+    width: 'calc(100% - 360px)',
     [`@media (max-width: 1940px)`]: {
-      width: 'calc(100% - 30px)'
+      width: '100%'
     }
   },
   right: {
